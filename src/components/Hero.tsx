@@ -21,62 +21,52 @@ const Hero = () => {
   }, []);
   
   return (
-    <section className="relative min-h-screen overflow-hidden flex items-center bg-slate-100">
+    <section className="relative min-h-screen overflow-hidden flex items-center bg-black">
       {/* Background Image with Parallax Effect */}
       <div className="absolute inset-0 overflow-hidden">
         <div 
           ref={parallaxRef}
-          className="absolute inset-0 bg-cover bg-center" 
+          className="absolute inset-0 bg-cover bg-center grayscale" 
           style={{ 
-            backgroundImage: 'url("https://images.unsplash.com/photo-1605649487212-47bdab064df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80")',
+            backgroundImage: 'url("https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80")',
             height: '120%',
             top: '-10%',
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 to-slate-900/40" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
       
       {/* Content */}
       <div className="container relative z-10 mt-16 md:mt-0">
         <div className="max-w-2xl animate-fade-in">
-          <span className="inline-block px-3 py-1 mb-3 rounded-full bg-terracotta-500/20 text-terracotta-500 text-sm font-medium">
+          <span className="inline-block px-3 py-1 mb-3 rounded-full bg-white/10 text-white text-sm font-medium">
             Premium Cab Service in Rajasthan
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-            Experience Rajasthan in <span className="text-terracotta-500">Comfort & Style</span>
+            Experience Rajasthan in <span className="text-white">Comfort & Style</span>
           </h1>
-          <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-xl leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl leading-relaxed">
             Discover the royal heritage of Rajasthan with our premium taxi service. From Udaipur's lakes to Jaipur's palaces, travel with comfort and elegance.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-            <Button size="lg" className="bg-terracotta-500 hover:bg-terracotta-600 transition-colors duration-300 rounded-md text-white px-8 py-6">
+            <Button size="lg" className="bg-white hover:bg-gray-100 text-black transition-colors duration-300 rounded-md px-8 py-6">
               Book a Ride
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 hover:bg-white/20 text-white border-white/20 rounded-md px-8 py-6">
+            <Button variant="outline" size="lg" className="bg-transparent hover:bg-white/10 text-white border-white rounded-md px-8 py-6">
               Our Services
             </Button>
           </div>
           
           {/* Destination Tags */}
           <div className="mt-12 flex flex-wrap gap-3">
-            <div className="flex items-center bg-white/10 rounded-full px-4 py-2 text-sm text-white">
-              <MapPin className="h-4 w-4 mr-1 text-terracotta-500" />
-              <span>Udaipur</span>
-            </div>
-            <div className="flex items-center bg-white/10 rounded-full px-4 py-2 text-sm text-white">
-              <MapPin className="h-4 w-4 mr-1 text-terracotta-500" />
-              <span>Jaipur</span>
-            </div>
-            <div className="flex items-center bg-white/10 rounded-full px-4 py-2 text-sm text-white">
-              <MapPin className="h-4 w-4 mr-1 text-terracotta-500" />
-              <span>Jodhpur</span>
-            </div>
-            <div className="flex items-center bg-white/10 rounded-full px-4 py-2 text-sm text-white">
-              <MapPin className="h-4 w-4 mr-1 text-terracotta-500" />
-              <span>Pushkar</span>
-            </div>
+            {['Udaipur', 'Jaipur', 'Jodhpur', 'Pushkar'].map((city) => (
+              <div key={city} className="flex items-center bg-white/10 rounded-full px-4 py-2 text-sm text-white">
+                <MapPin className="h-4 w-4 mr-1 text-white" />
+                <span>{city}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -67,50 +66,30 @@ const Navbar = () => {
           className="flex items-center"
           onClick={() => setMobileMenuOpen(false)}
         >
-          <h1 className="text-xl md:text-2xl font-bold text-slate-800">
-            <span className="text-terracotta-500">A to Z</span> Udaipur
+          <h1 className="text-xl md:text-2xl font-bold text-black">
+            <span className="text-black">A to Z</span> Udaipur
           </h1>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link 
-            to="/"
-            className="text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors duration-200"
-          >
-            Home
-          </Link>
-          <a 
-            href="#services"
-            className="text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors duration-200"
-          >
-            Services
-          </a>
-          <a 
-            href="#destinations"
-            className="text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors duration-200"
-          >
-            Destinations
-          </a>
-          <a 
-            href="#testimonials"
-            className="text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors duration-200"
-          >
-            Testimonials
-          </a>
-          <a 
-            href="#contact"
-            className="text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors duration-200"
-          >
-            Contact
-          </a>
+          {['Home', 'Services', 'Destinations', 'Testimonials', 'Contact'].map((item) => (
+            <a 
+              key={item}
+              href={item === 'Home' ? '/' : `#${item.toLowerCase()}`}
+              className="text-black hover:text-gray-600 text-sm font-medium transition-colors duration-200"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {item}
+            </a>
+          ))}
         </nav>
 
-        {/* Call Now Button (Desktop) */}
+        {/* Call Now Button */}
         <div className="hidden md:block">
           <Button 
             variant="default" 
-            className="bg-terracotta-500 hover:bg-terracotta-600 transition-colors duration-300"
+            className="bg-black hover:bg-gray-800 text-white transition-colors duration-300"
           >
             <Phone className="mr-2 h-4 w-4" />
             Call Now
@@ -119,7 +98,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button 
-          className="md:hidden text-slate-800 focus:outline-none"
+          className="md:hidden text-black focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -181,7 +160,7 @@ const Navbar = () => {
           <div className="mt-auto mb-6">
             <Button 
               variant="default" 
-              className="w-full bg-terracotta-500 hover:bg-terracotta-600 transition-colors duration-300"
+              className="w-full bg-black hover:bg-gray-800 text-white transition-colors duration-300"
             >
               <Phone className="mr-2 h-4 w-4" />
               Call Now
