@@ -42,6 +42,7 @@ const Index = () => {
       <Services />
       <Destinations />
       <Testimonials />
+      {/* This will render the Contact component while allowing the actual fix to be made in the contact.tsx file itself */}
       <Contact />
     </MainLayout>
   );

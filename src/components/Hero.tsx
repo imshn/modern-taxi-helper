@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, MapPin } from 'lucide-react';
@@ -58,7 +59,7 @@ const Hero = () => {
           
           <div className="mt-12 flex flex-wrap gap-3">
             {['Udaipur', 'Jaipur', 'Jodhpur', 'Pushkar'].map((city) => (
-              <div key={city} className="flex items-center bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 text-sm text-white">
+              <div key={city} className="flex items-center bg-black/80 backdrop-blur-sm rounded-full px-4 py-2 text-sm text-white border border-white/20">
                 <MapPin className="h-4 w-4 mr-1 text-white" />
                 <span>{city}</span>
               </div>
