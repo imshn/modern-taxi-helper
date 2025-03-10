@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -56,7 +57,7 @@ const Navbar = () => {
         "fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300",
         isScrolled ? 
           "py-2 bg-white shadow-md" : 
-          "py-4 bg-transparent"
+          "py-4 bg-black/40 backdrop-blur-md"
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
@@ -66,8 +67,11 @@ const Navbar = () => {
           className="flex items-center"
           onClick={() => setMobileMenuOpen(false)}
         >
-          <h1 className="text-xl md:text-2xl font-bold text-black">
-            <span className="text-black">A to Z</span> Udaipur
+          <h1 className={cn(
+            "text-xl md:text-2xl font-bold",
+            isScrolled ? "text-black" : "text-white"
+          )}>
+            <span className={isScrolled ? "text-black" : "text-white"}>A to Z</span> Udaipur
           </h1>
         </Link>
 
@@ -77,7 +81,10 @@ const Navbar = () => {
             <a 
               key={item}
               href={item === 'Home' ? '/' : `#${item.toLowerCase()}`}
-              className="text-black hover:text-gray-600 text-sm font-medium transition-colors duration-200"
+              className={cn(
+                "hover:text-gray-300 text-sm font-medium transition-colors duration-200",
+                isScrolled ? "text-black" : "text-white"
+              )}
               onClick={() => setMobileMenuOpen(false)}
             >
               {item}
@@ -89,7 +96,12 @@ const Navbar = () => {
         <div className="hidden md:block">
           <Button 
             variant="default" 
-            className="bg-black hover:bg-gray-800 text-white transition-colors duration-300"
+            className={cn(
+              "transition-colors duration-300",
+              isScrolled ? 
+                "bg-black hover:bg-gray-800 text-white" : 
+                "bg-white hover:bg-gray-100 text-black"
+            )}
           >
             <Phone className="mr-2 h-4 w-4" />
             Call Now
@@ -98,14 +110,14 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button 
-          className="md:hidden text-black focus:outline-none"
+          className="md:hidden focus:outline-none"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
           {mobileMenuOpen ? (
-            <X className="h-6 w-6" />
+            <X className={isScrolled ? "h-6 w-6 text-black" : "h-6 w-6 text-white"} />
           ) : (
-            <Menu className="h-6 w-6" />
+            <Menu className={isScrolled ? "h-6 w-6 text-black" : "h-6 w-6 text-white"} />
           )}
         </button>
       </div>
