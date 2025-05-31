@@ -100,9 +100,9 @@ const Services = () => {
   }, []);
 
   return (
-    <section id="services" className="section bg-white py-16 md:py-24" ref={sectionRef}>
+    <section id="services" className="section bg-white py-12 md:py-16" ref={sectionRef}>
       <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="inline-block px-3 py-1 mb-3 rounded-full bg-gray-100 text-gray-800 text-sm font-medium">
             Our Services
           </span>

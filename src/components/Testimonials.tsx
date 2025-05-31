@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 
@@ -48,7 +47,7 @@ const testimonials = [
 const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] }) => {
   return (
     <div className="bg-white rounded-xl p-8 shadow-sm border border-slate-100 flex flex-col h-full">
-      <div className="mb-6 text-terracotta-500">
+      <div className="mb-6 text-black">
         <Quote className="h-10 w-10 opacity-20" />
       </div>
       
@@ -140,10 +139,10 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="section py-16 md:py-24">
+    <section id="testimonials" className="section py-12 md:py-16">
       <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16 opacity-0 translate-y-8" ref={sectionRef}>
-          <span className="inline-block px-3 py-1 mb-3 rounded-full bg-terracotta-500/10 text-terracotta-500 text-sm font-medium">
+        <div className="text-center max-w-3xl mx-auto mb-12 opacity-0 translate-y-8" ref={sectionRef}>
+          <span className="inline-block px-3 py-1 mb-3 rounded-full bg-black/10 text-black text-sm font-medium">
             Customer Stories
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">What Our Clients Say</h2>
@@ -172,7 +171,7 @@ const Testimonials = () => {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentIndex ? "bg-terracotta-500" : "bg-slate-300"
+                    index === currentIndex ? "bg-black" : "bg-slate-300"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -203,7 +202,7 @@ const Testimonials = () => {
                     key={index}
                     onClick={() => setCurrentIndex(index)}
                     className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                      index === currentIndex ? "bg-terracotta-500" : "bg-slate-300"
+                      index === currentIndex ? "bg-black" : "bg-slate-300"
                     }`}
                     aria-label={`Go to slide ${index + 1}`}
                   />
