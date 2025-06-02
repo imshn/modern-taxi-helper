@@ -4,43 +4,43 @@ import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    name: "Priya Sharma",
-    location: "Delhi, India",
-    text: "Our trip from Udaipur to Jaipur was flawless! The driver was professional, the car was clean and comfortable, and we felt safe throughout the journey. Highly recommend AtoZ Udaipur for anyone visiting Rajasthan.",
-    avatar: "https://randomuser.me/api/portraits/women/32.jpg",
+    name: "Deema Habboub",
+    location: "Jordan",
+    text: "I am very fortunate to have met Rafiq in Udaipur. I came for a wedding and needed help navigating around the city. He was a super great guide around the city and always made himself available to answer and pick me up. He also helped me pick up my Lehenga rental when I wasn’t able to leave the wedding events, and took me around to run errands. He also spoke Arabic and was very considerate. Best of all he didn’t try to push me to stores I didn’t want to go to, which is very common with the drivers here. Thank you so much!",
+    avatar: "D",
     rating: 5
   },
   {
     id: 2,
-    name: "John Peterson",
+    name: "Priyank Gupta",
     location: "London, UK",
-    text: "As tourists visiting India for the first time, we were nervous about transportation. AtoZ Udaipur exceeded our expectations with their excellent service. Our driver knew all the best spots and was incredibly helpful.",
+    text: "19 Oct 2024- Best rental car in udaipur. We booked for nathdwara and ekling temple, also he covered places on the way. Very patient and informative driver. We really enjoyed. Rajik ji drived us full day trip he is really good, no rash driving, no cheating. Thanks for taking us and we had great experience on family vacation.",
     avatar: "https://randomuser.me/api/portraits/men/42.jpg",
     rating: 5
   },
   {
     id: 3,
-    name: "Rajat Mehta",
+    name: "Karan Jain",
     location: "Mumbai, India",
-    text: "Used their service for a family trip across Rajasthan. The vehicles were spacious, air-conditioned, and the drivers were courteous. They accommodated all our requests and made our journey memorable.",
+    text: "Mr. Rafiq is very reliable and responsive. He drove us around Udaipur for sightseeing as well as dropped us to the airport. The car is clean and spacious. Would highly recommend his services for moving around Udaipur.",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg",
     rating: 5
   },
   {
     id: 4,
-    name: "Sarah Williams",
+    name: "Vibhav mittal",
     location: "Sydney, Australia",
-    text: "I booked AtoZ Udaipur for a solo trip through Rajasthan. As a woman traveling alone, safety was my priority. They provided exceptional service, and I felt secure throughout my journey. Will definitely use them again!",
+    text: "Close your eyes and choose this agent to travel across udaipur and near by places.They take minimal charges compare to other vendors. Additionally they give enough time for you to enjoy the travel and Hassel free.",
     avatar: "https://randomuser.me/api/portraits/women/61.jpg",
     rating: 5
   },
   {
     id: 5,
-    name: "Akash Patel",
+    name: "ANKUR GARODIA",
     location: "Ahmedabad, India",
-    text: "Our corporate team used AtoZ Udaipur for an offsite in Rajasthan. Their fleet was impressive, drivers were punctual, and the booking process was seamless. Perfect for business travel needs.",
+    text: "It was a nice and comfortable experience with Mr. Rafique on our journey to mount abu. His cordial and friendly behaviour was impressive.",
     avatar: "https://randomuser.me/api/portraits/men/22.jpg",
-    rating: 4
+    rating: 5
   }
 ];
 
