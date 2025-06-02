@@ -169,7 +169,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-lg">Our Location</h4>
                     <p className="text-gray-600 mt-1">
-                      123 Lake Palace Road, <br />
+                    Gandhi nagar, A block, university road, <br />
                       Udaipur, Rajasthan 313001
                     </p>
                   </div>
@@ -182,8 +182,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-lg">Phone Number</h4>
                     <p className="text-gray-600 mt-1">
-                      +91 98765 43210 <br />
-                      +91 98765 43211
+                      +91 9602283839
                     </p>
                   </div>
                 </div>
@@ -195,8 +194,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-medium text-lg">Email Address</h4>
                     <p className="text-gray-600 mt-1">
-                      info@atozudaipur.com <br />
-                      bookings@atozudaipur.com
+                    rafikudr@gmail.com
                     </p>
                   </div>
                 </div>
