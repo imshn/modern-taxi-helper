@@ -71,7 +71,7 @@ const Navbar = () => {
             "text-xl md:text-2xl font-bold",
             isScrolled ? "text-black" : "text-white"
           )}>
-            <span className={isScrolled ? "text-black" : "text-white"}A TO Z</span> UDAIPUR TOURS
+            <span className={isScrolled ? "text-black" : "text-white"}>A TO Z</span> UDAIPUR TOURS
           </h1>
         </Link>
 
