@@ -93,15 +93,15 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Phone className="h-5 w-5 text-terracotta-500 mr-3 mt-0.5" />
-                <span className="text-slate-300">+91 98765 43210</span>
+                <span className="text-slate-300">+91 9602283839</span>
               </li>
               <li className="flex items-start">
                 <Mail className="h-5 w-5 text-terracotta-500 mr-3 mt-0.5" />
-                <span className="text-slate-300">info@atozudaipur.com</span>
+                <span className="text-slate-300">rafikudr@gmail.com</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-terracotta-500 mr-3 mt-0.5" />
-                <span className="text-slate-300">123 Lake Palace Road, Udaipur, Rajasthan 313001</span>
+                <span className="text-slate-300">Gandhi nagar, A block, university road, Udaipur, Rajasthan 313001</span>
               </li>
             </ul>
           </div>
